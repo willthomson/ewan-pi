@@ -32,7 +32,7 @@ GPIO.output(relay_ch4, GPIO.HIGH)
 
 @app.route('/')
 def index():
-  return 'Hello world'
+  return app.send_static_file('templates/index.html')
 
 
 @app.route('/on')

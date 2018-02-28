@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>EwanPi</title>
+    <meta name="description" content="EwanPi">
+    <meta name="author" content="Will">
+    <link rel="stylesheet" href="static/css/sierra.min.css">
+  </head>
+  <body>
+    <div id="ewan">
+      <div class="section background-dark">
+        <div class="container text-center">
+          <h3 class="text-huge text-white text-with-subtitle">Ewan</h3>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <div class="section">
+              <div class="aligner-center-horitzontal aligner-center-vertical">
+                <button class="button button-huge button-primary block-mobile" v-on:click="ewanOn">On</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="section">
+              <div class="aligner-center-horitzontal aligner-center-vertical">
+                <button class="button button-huge button-red block-mobile" v-on:click="ewanOff">Off</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="section">
+              <div class="aligner-center-horitzontal aligner-center-vertical">
+                <button class="button button-huge block-mobile" v-on:click="ewanRepeat">Repeat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="static/js/vue.min.js"></script>
+      <script src="static/js/ewan.js"></script>
+    </div>
+  </body>
+</html>
