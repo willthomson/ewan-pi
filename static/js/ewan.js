@@ -10,7 +10,10 @@ new Vue({
       fetch('/off');
     },
     ewanRepeat: function () {
-      fetch('/repeat');
+      fetch('/repeat/5');
     },
+    ewanRepeatForever: function () {
+      fetch('/repeat/-1');
+    }
   }
 });
