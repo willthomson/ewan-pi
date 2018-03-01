@@ -16,6 +16,7 @@ relay_ch1 = 19
 relay_ch2 = 26
 relay_ch3 = 20
 relay_ch4 = 21
+flask.g.repeat = 0
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
@@ -34,12 +35,13 @@ GPIO.output(relay_ch4, GPIO.HIGH)
 
 def handle_cron():
   print('repeat', flask.g.repeat)
-  if(flask.g.repeat > 0):
+  repeat = int(flask.g.repeat)
+  if(repeat > 0):
     on()
-    flask.g.repeat = flask.g.repeat - 1
-    if(flask.g.repeat == 0):
+    flask.g.repeat = repeat = repeat - 1
+    if(repeat == 0):
       scheduler.pause()
-  elif(flask.g.repeatrepeat == -1):
+  elif(repeat == -1):
     on()
   else:
     flask.g.repeat = 0
@@ -71,7 +73,7 @@ def on():
 
 @app.route('/repeat/<repeat_count>')
 def repeat(repeat_count):
-  print('repeat_count', repeat_count)  
+  print('repeat_count', repeat_count)
   flask.g.repeat = repeat_count
   scheduler.resume()
   return ''
@@ -88,50 +90,3 @@ def off():
 
 if __name__ == '__main__':
   app.run(debug=True, host='0.0.0.0')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
