@@ -20,7 +20,8 @@ the buttons.
 I attached the relay board to the Raspberry Pi, then cut the button off of
 the desired sound and connected it to one of the relays.
 
-# Development
+## Development
 
 1. `pip install -r requirements.txt`
 1. `FLASK_APP=app.py flask run`
+1. Open http://localhost:5000
