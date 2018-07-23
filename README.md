@@ -4,7 +4,7 @@ Ewan the Dream Sheep controlled by Raspberry Pi relay board.
 
 ![Photo of a Raspberry Pi with a relay board and the internals of a Ewan](https://raw.githubusercontent.com/willthomson/ewan-pi/master/ewan-pi.jpg)
 
-When my son was stirs, the sounds from Ewan help him go back to sleep.
+When my son stirs, the sounds from Ewan help him go back to sleep.
 However, going into the room to start it wakes him up. I wanted a way
 to start Ewan without entering the room, so I created a simple Flask app,
 running on a Raspberry Pi, which uses a relay board to simulate pressing
